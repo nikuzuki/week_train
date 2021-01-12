@@ -1,0 +1,9 @@
+version: '3'
+services:
+  week_train:
+    build: .
+    ports:
+      - 8080:8080
+    tty: true
+    volumes:
+      - .:/go/src/work
