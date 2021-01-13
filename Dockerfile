@@ -5,3 +5,7 @@ RUN mkdir /go/src/work
 WORKDIR /go/src/work
 
 ADD . /go/src/work
+
+RUN go get -u github.com/cosmtrek/air
+
+RUN go get
