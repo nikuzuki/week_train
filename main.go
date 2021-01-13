@@ -3,8 +3,6 @@ package main
 import (
 	"net/http"
 	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
-	livereload "github.com/mattn/echo-livereload"
 )
 
 func main() {
@@ -15,9 +13,6 @@ func main() {
 	e.GET("/users/:id", getUser)
 	e.Logger.Fatal(e.Start(":8080"))
 
-	e.Use(middleware.Static("assets"))
-	e.Use(livereload.LiveReload())
-	
 	//e.POST("/users", saveUser)
 	//e.GET("/users/:id", getUser)
 	//e.PUT("/users/:id", updateUser)
